@@ -6,7 +6,7 @@
 
 import fs from "node:fs";
 import { getFilteredUrlFromFeed } from "./filter.js";
-import { extract } from "@extractus/article-extractor";
+import { extract, ArticleData } from "@extractus/article-extractor";
 import Mustache from "mustache";
 
 const outputFile = "feed.xml";
@@ -14,6 +14,11 @@ const outputFile = "feed.xml";
 const feedTemplate = fs.readFileSync("feed_template.xml.mustache", "utf8");
 const feedList = fs.readFileSync("feed_list.txt", "utf8").trim().split("\n");
 
+/**
+ * Fetch feeds and return filtered URLs mentioned in the feed
+ * @param {string[]} feedList
+ * @return {Promise<string[]>}
+ */
 function getNewsUrl(feedList) {
   return feedList.map(async (list) => {
     const response = await fetch(list);
@@ -22,6 +27,10 @@ function getNewsUrl(feedList) {
   });
 }
 
+/**
+ * Render RSS using template and write it to `outputFile`
+ * @param {ArticleData[]} rssItem
+ */
 function writeToFile(rssItem) {
   fs.writeFileSync(
     outputFile,
