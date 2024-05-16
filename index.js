@@ -5,7 +5,7 @@
 "use strict";
 
 import fs from "node:fs";
-import { getFilteredUrlFromFeed } from "./filter.js";
+import { getFilteredUrlFromFeed } from "./src/filter.js";
 import { extract } from "@extractus/article-extractor";
 import Mustache from "mustache";
 
