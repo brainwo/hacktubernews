@@ -6,12 +6,12 @@
 
 import fs from "node:fs";
 import { getFilteredUrlFromFeed } from "./filter.js";
-import { extract, ArticleData } from "@extractus/article-extractor";
+import { extract } from "@extractus/article-extractor";
 import Mustache from "mustache";
 
 const outputFile = "feed.xml";
 
-const feedTemplate = fs.readFileSync("feed_template.xml.mustache", "utf8");
+const feedTemplate = fs.readFileSync("feed.xml.mustache", "utf8");
 const feedList = fs.readFileSync("feed_list.txt", "utf8").trim().split("\n");
 
 /**
@@ -42,7 +42,7 @@ Promise.all(getNewsUrl(feedList))
   .then((source) => source.flat())
   .then((flattenData) =>
     Promise.all(
-      flattenData.reduce(callbackfn).map(async (link) => {
+      [...new Set(flattenData)].map(async (link) => {
         try {
           return await extract(link);
         } catch (err) {
