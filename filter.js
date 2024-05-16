@@ -21,18 +21,35 @@ const blockedUrls = [
   "http://cleancoder.com",
 ];
 
+/**
+ * @typedef {Object} FilteredUrl
+ * @property {string} source
+ * @property {string} url
+ */
+
+/**
+ * Return urls of article and what video it's from
+ * @param {string} feed
+ * @return {FilteredUrl[]}
+ */
 export function getFilteredUrlFromFeed(feed) {
-  return extractUrls(
-    JSON.parse(toJson(feed), { sanitize: false })
-      ["feed"]["entry"].map(
-        (entry) => entry["media:group"]["media:description"],
-      )
-      .toString(),
-  ).filter(
-    (url) =>
-      !blockedUrls.some((e) => url.startsWith(e)) ||
-      url.startsWith("https://www.youtube.com/watch") ||
-      (url.includes("status") &&
-        (url.includes("twitter.com") || url.includes("x.com"))),
-  );
+  return JSON.parse(toJson(feed), { sanitize: false })
+    ["feed"]["entry"].map((entry) => ({
+      video: entry["media:group"]["media:content"]["url"],
+      urls: extractUrls(`${entry["media:group"]["media:description"]}`),
+    }))
+    .flat()
+    .reduce((acc, curr) => {
+      if (typeof curr["urls"] === "undefined") return acc;
+      curr["urls"]
+        .filter(
+          (url) =>
+            !blockedUrls.some((e) => url.startsWith(e)) ||
+            url.startsWith("https://www.youtube.com/watch") ||
+            (url.includes("status") &&
+              (url.includes("twitter.com") || url.includes("x.com")))
+        )
+        .forEach((url) => acc.push({ source: curr.video, url: url }));
+      return acc;
+    }, new Array());
 }

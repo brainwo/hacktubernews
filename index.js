@@ -42,13 +42,15 @@ Promise.all(getNewsUrl(feedList))
   .then((source) => source.flat())
   .then((flattenData) =>
     Promise.all(
-      [...new Set(flattenData)].map(async (link) => {
-        try {
-          return await extract(link);
-        } catch (err) {
-          return null;
+      [...flattenData.reduce((acc, curr) => acc.add(curr), new Set())].map(
+        async (link) => {
+          try {
+            return await extract(link["url"]);
+          } catch (err) {
+            return null;
+          }
         }
-      })
+      )
     )
       .then((rssItem) => rssItem.filter((e) => e !== null))
       .then((rssItem) => writeToFile(rssItem))

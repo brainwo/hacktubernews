@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns:yt="http://www.youtube.com/xml/schemas/2015" xmlns:media="http://search.yahoo.com/mrss/" xmlns="http://www.w3.org/2005/Atom">
+ <link rel="self" href="http://www.youtube.com/feeds/videos.xml?channel_id=UCbRP3c757lWg9M-U7TyEkXA%0A"/>
+ <id>yt:channel:bRP3c757lWg9M-U7TyEkXA</id>
+ <yt:channelId>bRP3c757lWg9M-U7TyEkXA</yt:channelId>
+ <title>Theo - t3․gg</title>
+ <link rel="alternate" href="https://www.youtube.com/channel/UCbRP3c757lWg9M-U7TyEkXA"/>
+ <author>
+  <name>Theo - t3․gg</name>
+  <uri>https://www.youtube.com/channel/UCbRP3c757lWg9M-U7TyEkXA</uri>
+ </author>
+ <published>2007-01-24T01:57:07+00:00</published>
+ <entry>
+  <id>yt:video:DhfeXfF_W4w</id>
+  <yt:videoId>DhfeXfF_W4w</yt:videoId>
+  <yt:channelId>UCbRP3c757lWg9M-U7TyEkXA</yt:channelId>
+  <title>React Just Changed Forever</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=DhfeXfF_W4w"/>
+  <author>
+   <name>Theo - t3․gg</name>
+   <uri>https://www.youtube.com/channel/UCbRP3c757lWg9M-U7TyEkXA</uri>
+  </author>
+  <published>2024-05-15T22:21:35+00:00</published>
+  <updated>2024-05-16T06:42:32+00:00</updated>
+  <media:group>
+   <media:title>React Just Changed Forever</media:title>
+   <media:content url="https://www.youtube.com/v/DhfeXfF_W4w?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i1.ytimg.com/vi/DhfeXfF_W4w/hqdefault.jpg" width="480" height="360"/>
+   <media:description>React Conf just happened, and it's been a wild ride. React 19 is out, but that's old news. We're here for something almost forgotten, something I've wanted for awhile.
+
+The React Compiler is here. I'm so hyped.
+
+SOURCES
+https://playground.react.dev
+https://react.dev/learn/react-compiler
+https://www.youtube.com/watch?v=PYHBHK37xlE
+https://github.com/facebook/react/pull/29061
+
+Check out my Twitch, Twitter, Discord more at https://t3.gg
+
+S/O Ph4seOn3 for the awesome edit 🙏</media:description>
+   <media:community>
+    <media:starRating count="2364" average="5.00" min="1" max="5"/>
+    <media:statistics views="52433"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:FFxhkWk3I7U</id>
+  <yt:videoId>FFxhkWk3I7U</yt:videoId>
+  <yt:channelId>UCbRP3c757lWg9M-U7TyEkXA</yt:channelId>
+  <title>How was this not in the browser before???</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=FFxhkWk3I7U"/>
+  <author>
+   <name>Theo - t3․gg</name>
+   <uri>https://www.youtube.com/channel/UCbRP3c757lWg9M-U7TyEkXA</uri>
+  </author>
+  <published>2024-05-14T17:34:51+00:00</published>
+  <updated>2024-05-16T05:46:11+00:00</updated>
+  <media:group>
+   <media:title>How was this not in the browser before???</media:title>
+   <media:content url="https://www.youtube.com/v/FFxhkWk3I7U?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i3.ytimg.com/vi/FFxhkWk3I7U/hqdefault.jpg" width="480" height="360"/>
+   <media:description>YOUTUBE DESTROYED MY DESCRIPTION WTF
+
+Popover API is so overdue and I'm pumped it's here. Popper and FloatingUI carried us this far, but the future of tooltips is bright
+
+SOURCES
+https://developer.mozilla.org/en-US/docs/Web/API/Popover_API
+https://twitter.com/chancethedev/status/1789037040161747361
+https://web.dev/blog/popover-api
+https://codepen.io/web-dot-dev/pen/RwOvjrv
+https://developer.chrome.com/blog/anchor-positioning-api
+
+Ty Ph4se0n3 for the edit!</media:description>
+   <media:community>
+    <media:starRating count="1959" average="5.00" min="1" max="5"/>
+    <media:statistics views="66066"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:aOk67eT3fpg</id>
+  <yt:videoId>aOk67eT3fpg</yt:videoId>
+  <yt:channelId>UCbRP3c757lWg9M-U7TyEkXA</yt:channelId>
+  <title>This Release Makes Me Want To Leave React...</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=aOk67eT3fpg"/>
+  <author>
+   <name>Theo - t3․gg</name>
+   <uri>https://www.youtube.com/channel/UCbRP3c757lWg9M-U7TyEkXA</uri>
+  </author>
+  <published>2024-05-13T09:39:07+00:00</published>
+  <updated>2024-05-15T16:20:32+00:00</updated>
+  <media:group>
+   <media:title>This Release Makes Me Want To Leave React...</media:title>
+   <media:content url="https://www.youtube.com/v/aOk67eT3fpg?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i2.ytimg.com/vi/aOk67eT3fpg/hqdefault.jpg" width="480" height="360"/>
+   <media:description>Seriously. Elixir has always been my guilty pleasure and LiveView makes me rethink everything. Aaaaaaaaaa. So cool. Phoenix is dope and makes functional programming in a rails-like env fun
+
+SOURCE
+https://phoenixframework.org/blog/phoenix-liveview-1.0-released
+
+Check out my Twitch, Twitter, Discord more at https://t3.gg
+
+S/O Ph4se0n3 for the awesome edit 🙏</media:description>
+   <media:community>
+    <media:starRating count="2670" average="5.00" min="1" max="5"/>
+    <media:statistics views="108971"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:ZV7S337wJ18</id>
+  <yt:videoId>ZV7S337wJ18</yt:videoId>
+  <yt:channelId>UCbRP3c757lWg9M-U7TyEkXA</yt:channelId>
+  <title>AWS S3 Is Having Some Serious Issues...</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=ZV7S337wJ18"/>
+  <author>
+   <name>Theo - t3․gg</name>
+   <uri>https://www.youtube.com/channel/UCbRP3c757lWg9M-U7TyEkXA</uri>
+  </author>
+  <published>2024-05-11T05:21:12+00:00</published>
+  <updated>2024-05-12T06:47:06+00:00</updated>
+  <media:group>
+   <media:title>AWS S3 Is Having Some Serious Issues...</media:title>
+   <media:content url="https://www.youtube.com/v/ZV7S337wJ18?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i3.ytimg.com/vi/ZV7S337wJ18/hqdefault.jpg" width="480" height="360"/>
+   <media:description>The slow death of S3 has been happening for awhile now. As AWS's first service, it was kind of inevitable. So much so that I started an alternative.
+
+Speaking of that - https://uploadthing.com ;)
+
+SOURCES
+https://medium.com/@maciej.pocwierz/how-an-empty-s3-bucket-can-make-your-aws-bill-explode-934a383cb8b1
+https://twitter.com/jeffbarr/status/1787844682216792163
+
+Check out my Twitch, Twitter, Discord more at https://t3.gg
+
+S/O Ph4se0n3 for the awesome edit 🙏</media:description>
+   <media:community>
+    <media:starRating count="1614" average="5.00" min="1" max="5"/>
+    <media:statistics views="52421"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:KuPu4OTIaT8</id>
+  <yt:videoId>KuPu4OTIaT8</yt:videoId>
+  <yt:channelId>UCbRP3c757lWg9M-U7TyEkXA</yt:channelId>
+  <title>The End Of StackOverflow</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=KuPu4OTIaT8"/>
+  <author>
+   <name>Theo - t3․gg</name>
+   <uri>https://www.youtube.com/channel/UCbRP3c757lWg9M-U7TyEkXA</uri>
+  </author>
+  <published>2024-05-10T03:00:33+00:00</published>
+  <updated>2024-05-14T03:01:22+00:00</updated>
+  <media:group>
+   <media:title>The End Of StackOverflow</media:title>
+   <media:content url="https://www.youtube.com/v/KuPu4OTIaT8?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i4.ytimg.com/vi/KuPu4OTIaT8/hqdefault.jpg" width="480" height="360"/>
+   <media:description>StackOverflow is being eaten by ChatGPT. Now it's desperately trying to catch up. Will this be the end of StackOverflow (and maybe the rest of the internet)? Idk man I just talk about stuff and write code
+
+SOURCES
+https://twitter.com/StackOverflow/status/1787467736097939562
+https://twitter.com/t3dotgg/status/1787596365008380306
+https://observablehq.com/@ayhanfuat/the-fall-of-stack-overflow
+
+Check out my Twitch, Twitter, Discord more at https://t3.gg
+
+S/O Ph4se0n3 for the awesome edit 🙏</media:description>
+   <media:community>
+    <media:starRating count="3034" average="5.00" min="1" max="5"/>
+    <media:statistics views="75781"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:1gZmkpsVGkk</id>
+  <yt:videoId>1gZmkpsVGkk</yt:videoId>
+  <yt:channelId>UCbRP3c757lWg9M-U7TyEkXA</yt:channelId>
+  <title>CSS Is 2.4x Slower Than Inline Styles (Oh No...)</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=1gZmkpsVGkk"/>
+  <author>
+   <name>Theo - t3․gg</name>
+   <uri>https://www.youtube.com/channel/UCbRP3c757lWg9M-U7TyEkXA</uri>
+  </author>
+  <published>2024-05-09T08:00:00+00:00</published>
+  <updated>2024-05-11T01:52:22+00:00</updated>
+  <media:group>
+   <media:title>CSS Is 2.4x Slower Than Inline Styles (Oh No...)</media:title>
+   <media:content url="https://www.youtube.com/v/1gZmkpsVGkk?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i2.ytimg.com/vi/1gZmkpsVGkk/hqdefault.jpg" width="480" height="360"/>
+   <media:description>I hate to share this with you all. But if I have to have this cursed knowledge, so do you. Inline styles being faster than CSS is not too surprising. The speed difference, however, is a bit insane.
+
+SOURCE
+https://danielnagy.me/posts/Post_tsr8q6sx37pl
+
+Check out my Twitch, Twitter, Discord more at https://t3.gg
+
+S/O Ph4se0n3 for the awesome edit 🙏</media:description>
+   <media:community>
+    <media:starRating count="1524" average="5.00" min="1" max="5"/>
+    <media:statistics views="63495"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:PAf6NjyCnrI</id>
+  <yt:videoId>PAf6NjyCnrI</yt:videoId>
+  <yt:channelId>UCbRP3c757lWg9M-U7TyEkXA</yt:channelId>
+  <title>React's New Controversial Override</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=PAf6NjyCnrI"/>
+  <author>
+   <name>Theo - t3․gg</name>
+   <uri>https://www.youtube.com/channel/UCbRP3c757lWg9M-U7TyEkXA</uri>
+  </author>
+  <published>2024-05-08T08:00:19+00:00</published>
+  <updated>2024-05-10T04:20:11+00:00</updated>
+  <media:group>
+   <media:title>React's New Controversial Override</media:title>
+   <media:content url="https://www.youtube.com/v/PAf6NjyCnrI?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i1.ytimg.com/vi/PAf6NjyCnrI/hqdefault.jpg" width="480" height="360"/>
+   <media:description>Oh boy. This again. React is patching another global, this time it's `Date`
+
+SOURCE
+https://twitter.com/acdlite/status/1785691330988986587
+
+Edited by Ph4se0n3</media:description>
+   <media:community>
+    <media:starRating count="1338" average="5.00" min="1" max="5"/>
+    <media:statistics views="49547"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:a-K2C3sf1_Q</id>
+  <yt:videoId>a-K2C3sf1_Q</yt:videoId>
+  <yt:channelId>UCbRP3c757lWg9M-U7TyEkXA</yt:channelId>
+  <title>The Problem With UUIDs</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=a-K2C3sf1_Q"/>
+  <author>
+   <name>Theo - t3․gg</name>
+   <uri>https://www.youtube.com/channel/UCbRP3c757lWg9M-U7TyEkXA</uri>
+  </author>
+  <published>2024-05-07T08:00:00+00:00</published>
+  <updated>2024-05-12T01:45:36+00:00</updated>
+  <media:group>
+   <media:title>The Problem With UUIDs</media:title>
+   <media:content url="https://www.youtube.com/v/a-K2C3sf1_Q?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i2.ytimg.com/vi/a-K2C3sf1_Q/hqdefault.jpg" width="480" height="360"/>
+   <media:description>THANK YOU PLANETSCALE FOR SPONSORING THIS VIDEO
+
+UUID's have a time and place, but I rarely see them used correctly. I've wanted to do this rant for awhile and I'm happy I did because CUID2 is NOT a good option either 🙃
+
+SOURCE
+https://planetscale.com/blog/the-problem-with-using-a-uuid-primary-key-in-mysql
+
+Check out my Twitch, Twitter, Discord more at https://t3.gg
+
+S/O Ph4se0n3 for the awesome edit 🙏</media:description>
+   <media:community>
+    <media:starRating count="4428" average="5.00" min="1" max="5"/>
+    <media:statistics views="135320"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:zJr_DYctf_A</id>
+  <yt:videoId>zJr_DYctf_A</yt:videoId>
+  <yt:channelId>UCbRP3c757lWg9M-U7TyEkXA</yt:channelId>
+  <title>“California Skater Boy” Reacts To Senior JS Interview</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=zJr_DYctf_A"/>
+  <author>
+   <name>Theo - t3․gg</name>
+   <uri>https://www.youtube.com/channel/UCbRP3c757lWg9M-U7TyEkXA</uri>
+  </author>
+  <published>2024-05-06T10:47:35+00:00</published>
+  <updated>2024-05-14T23:56:39+00:00</updated>
+  <media:group>
+   <media:title>“California Skater Boy” Reacts To Senior JS Interview</media:title>
+   <media:content url="https://www.youtube.com/v/zJr_DYctf_A?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i3.ytimg.com/vi/zJr_DYctf_A/hqdefault.jpg" width="480" height="360"/>
+   <media:description></media:description>
+   <media:community>
+    <media:starRating count="1832" average="5.00" min="1" max="5"/>
+    <media:statistics views="40985"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:AKNH7mXciEM</id>
+  <yt:videoId>AKNH7mXciEM</yt:videoId>
+  <yt:channelId>UCbRP3c757lWg9M-U7TyEkXA</yt:channelId>
+  <title>React Removes `fetch`</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=AKNH7mXciEM"/>
+  <author>
+   <name>Theo - t3․gg</name>
+   <uri>https://www.youtube.com/channel/UCbRP3c757lWg9M-U7TyEkXA</uri>
+  </author>
+  <published>2024-05-05T09:53:37+00:00</published>
+  <updated>2024-05-07T20:54:30+00:00</updated>
+  <media:group>
+   <media:title>React Removes `fetch`</media:title>
+   <media:content url="https://www.youtube.com/v/AKNH7mXciEM?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i2.ytimg.com/vi/AKNH7mXciEM/hqdefault.jpg" width="480" height="360"/>
+   <media:description>The React &quot;fetch&quot; patch was controversial, but I genuinely liked it. That said, I understand why it's being removed, at least for now.
+
+SOURCES
+https://twitter.com/sebastienlorber/status/1783114423894233235
+https://github.com/facebook/react/pull/28896
+https://nextjs.org/docs/app/api-reference/functions/unstable_cache
+
+Check out my Twitch, Twitter, Discord more at https://t3.gg
+
+S/O Ph4se0n3 for the awesome edit 🙏</media:description>
+   <media:community>
+    <media:starRating count="1692" average="5.00" min="1" max="5"/>
+    <media:statistics views="68503"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:b23x_IWIb4c</id>
+  <yt:videoId>b23x_IWIb4c</yt:videoId>
+  <yt:channelId>UCbRP3c757lWg9M-U7TyEkXA</yt:channelId>
+  <title>Life After SQL (EdgeDB Is Fascinating)</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=b23x_IWIb4c"/>
+  <author>
+   <name>Theo - t3․gg</name>
+   <uri>https://www.youtube.com/channel/UCbRP3c757lWg9M-U7TyEkXA</uri>
+  </author>
+  <published>2024-05-03T20:11:53+00:00</published>
+  <updated>2024-05-09T19:45:08+00:00</updated>
+  <media:group>
+   <media:title>Life After SQL (EdgeDB Is Fascinating)</media:title>
+   <media:content url="https://www.youtube.com/v/b23x_IWIb4c?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i3.ytimg.com/vi/b23x_IWIb4c/hqdefault.jpg" width="480" height="360"/>
+   <media:description>Disclaimer: I am an advisor for EdgeDB, I do not ship it in production (I still build my services on PlanetScale)
+
+EdgeDB is getting pretty dang exciting. The idea of a &quot;more relational&quot; db is something I hadn't thought about enough before. Excited to see what they cook!
+
+SOURCES
+https://twitter.com/edgedatabase/status/1782485844814647402
+https://www.edgedb.com/blog/we-can-do-better-than-sql#null-a-bag-of-surprises
+
+Check out my Twitch, Twitter, Discord more at https://t3.gg
+
+S/O Ph4se0n3 for the awesome edit 🙏</media:description>
+   <media:community>
+    <media:starRating count="1714" average="5.00" min="1" max="5"/>
+    <media:statistics views="51885"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:Toar450Gk5Y</id>
+  <yt:videoId>Toar450Gk5Y</yt:videoId>
+  <yt:channelId>UCbRP3c757lWg9M-U7TyEkXA</yt:channelId>
+  <title>AWS’s Future is…Q?</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=Toar450Gk5Y"/>
+  <author>
+   <name>Theo - t3․gg</name>
+   <uri>https://www.youtube.com/channel/UCbRP3c757lWg9M-U7TyEkXA</uri>
+  </author>
+  <published>2024-05-03T07:29:11+00:00</published>
+  <updated>2024-05-05T10:21:43+00:00</updated>
+  <media:group>
+   <media:title>AWS’s Future is…Q?</media:title>
+   <media:content url="https://www.youtube.com/v/Toar450Gk5Y?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i1.ytimg.com/vi/Toar450Gk5Y/hqdefault.jpg" width="480" height="360"/>
+   <media:description>I...idk what I expected. But I'm a bit tired of these weird AI announcements in places they don't necessarily make sense. Can I blame Devin?
+
+SOURCES
+https://twitter.com/ajassy/status/1785293612835823716
+https://twitter.com/leeerob/status/1785498474462560309
+
+Check out my Twitch, Twitter, Discord more at https://t3.gg
+
+S/O Ph4se0n3 for the awesome edit 🙏</media:description>
+   <media:community>
+    <media:starRating count="952" average="5.00" min="1" max="5"/>
+    <media:statistics views="37171"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:75Hv0RUFIrQ</id>
+  <yt:videoId>75Hv0RUFIrQ</yt:videoId>
+  <yt:channelId>UCbRP3c757lWg9M-U7TyEkXA</yt:channelId>
+  <title>Dear GitHub, Why Did You Release This?</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=75Hv0RUFIrQ"/>
+  <author>
+   <name>Theo - t3․gg</name>
+   <uri>https://www.youtube.com/channel/UCbRP3c757lWg9M-U7TyEkXA</uri>
+  </author>
+  <published>2024-05-02T09:28:50+00:00</published>
+  <updated>2024-05-06T19:09:40+00:00</updated>
+  <media:group>
+   <media:title>Dear GitHub, Why Did You Release This?</media:title>
+   <media:content url="https://www.youtube.com/v/75Hv0RUFIrQ?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i4.ytimg.com/vi/75Hv0RUFIrQ/hqdefault.jpg" width="480" height="360"/>
+   <media:description>My lord, GitHub Copilot Workspace is a total disaster. Devin tier. I can't believe they are showing this off in such a terrible state.
+
+SOURCE
+https://github.blog/2024-04-29-github-copilot-workspace/
+https://supermaven.com/
+
+Check out my Twitch, Twitter, Discord more at https://t3.gg
+
+S/O Ph4se0n3 for the awesome edit 🙏</media:description>
+   <media:community>
+    <media:starRating count="1648" average="5.00" min="1" max="5"/>
+    <media:statistics views="60264"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:MS1W7UqrX3I</id>
+  <yt:videoId>MS1W7UqrX3I</yt:videoId>
+  <yt:channelId>UCbRP3c757lWg9M-U7TyEkXA</yt:channelId>
+  <title>Was I Wrong About Rust?</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=MS1W7UqrX3I"/>
+  <author>
+   <name>Theo - t3․gg</name>
+   <uri>https://www.youtube.com/channel/UCbRP3c757lWg9M-U7TyEkXA</uri>
+  </author>
+  <published>2024-05-01T08:00:09+00:00</published>
+  <updated>2024-05-03T03:38:22+00:00</updated>
+  <media:group>
+   <media:title>Was I Wrong About Rust?</media:title>
+   <media:content url="https://www.youtube.com/v/MS1W7UqrX3I?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i2.ytimg.com/vi/MS1W7UqrX3I/hqdefault.jpg" width="480" height="360"/>
+   <media:description>I did a video a few weeks ago about how moving from Go to Rust may have been a mistake. After a lot of chats with a lot of Rust devs, I MIGHT be wrong. Even if Prime agreed with me before.
+
+SOURCE
+https://ielm.io/blog/turbo
+
+Check out my Twitch, Twitter, Discord more at https://t3.gg
+
+S/O Ph4se0n3 for the awesome edit 🙏</media:description>
+   <media:community>
+    <media:starRating count="1832" average="5.00" min="1" max="5"/>
+    <media:statistics views="61669"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:rg3zgQ3xBRc</id>
+  <yt:videoId>rg3zgQ3xBRc</yt:videoId>
+  <yt:channelId>UCbRP3c757lWg9M-U7TyEkXA</yt:channelId>
+  <title>Pretty much every website uses the wrong font size…</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=rg3zgQ3xBRc"/>
+  <author>
+   <name>Theo - t3․gg</name>
+   <uri>https://www.youtube.com/channel/UCbRP3c757lWg9M-U7TyEkXA</uri>
+  </author>
+  <published>2024-04-30T08:00:25+00:00</published>
+  <updated>2024-05-02T02:46:29+00:00</updated>
+  <media:group>
+   <media:title>Pretty much every website uses the wrong font size…</media:title>
+   <media:content url="https://www.youtube.com/v/rg3zgQ3xBRc?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i3.ytimg.com/vi/rg3zgQ3xBRc/hqdefault.jpg" width="480" height="360"/>
+   <media:description>I have strong opinions on fonts. Especially the right sizes for them. Y'all know me, bigger is better (for text).
+
+This article was phenomenal and I highly recommend reading it
+https://adrianroselli.com/2024/03/the-ultimate-ideal-bestest-base-font-size-that-everyone-is-keeping-a-secret-especially-chet.html
+
+Check out my Twitch, Twitter, Discord more at https://t3.gg
+
+S/O Ph4se0n3 for the awesome edit 🙏</media:description>
+   <media:community>
+    <media:starRating count="2213" average="5.00" min="1" max="5"/>
+    <media:statistics views="57293"/>
+   </media:community>
+  </media:group>
+ </entry>
+</feed>
