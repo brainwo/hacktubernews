@@ -27,11 +27,6 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
-        with:
-          source: ./
-          destination: ./_site
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -40,8 +35,11 @@ jobs:
         run: npm install
       - name: Generate feed.xml
         run: node index.js
-      - name: Move feed.xml to pages artifact folder
-        run: mv feed.xml ./_site/
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
