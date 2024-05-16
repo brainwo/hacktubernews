@@ -25,14 +25,14 @@ export function getFilteredUrlFromFeed(feed) {
   return extractUrls(
     JSON.parse(toJson(feed), { sanitize: false })
       ["feed"]["entry"].map(
-        (entry) => entry["media:group"]["media:description"]
+        (entry) => entry["media:group"]["media:description"],
       )
-      .toString()
+      .toString(),
   ).filter(
     (url) =>
       !blockedUrls.some((e) => url.startsWith(e)) ||
       url.startsWith("https://www.youtube.com/watch") ||
       (url.includes("status") &&
-        (url.includes("twitter.com") || url.includes("x.com")))
+        (url.includes("twitter.com") || url.includes("x.com"))),
   );
 }

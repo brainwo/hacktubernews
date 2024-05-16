@@ -40,9 +40,9 @@ function writeToFile(rssItem) {
 
 Promise.all(getNewsUrl(feedList))
   .then((source) => source.flat())
-  .then((flatten) =>
+  .then((flattenData) =>
     Promise.all(
-      [...new Set(flatten)].map(async (link) => {
+      flattenData.reduce(callbackfn).map(async (link) => {
         try {
           return await extract(link);
         } catch (err) {
