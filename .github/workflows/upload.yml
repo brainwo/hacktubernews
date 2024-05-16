@@ -29,7 +29,7 @@ jobs:
         with:
           node-version: 18
       - name: Install Node.js dependencies
-        run: npm install
+        run: npm install --omit=dev
       - name: Generate feed.xml
         run: node index.js
       - name: Build with Jekyll
