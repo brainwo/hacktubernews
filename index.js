@@ -7,13 +7,11 @@
 import fs from "node:fs";
 import { getFilteredUrlFromFeed } from "./filter.js";
 import { extract } from "@extractus/article-extractor";
-
-const rssHeader =
-  '<?xml version="1.0" encoding="UTF-8"?> <rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:cc="http://cyber.law.harvard.edu/rss/creativeCommonsRssModule.html"> <channel> <title>Hacktuber News</title> <link>https://brainwo.github.io/hacktubernews</link> <description>Aggregate blog posts discussed in tech YouTube videos.</description>';
-const rssFooter = "</channel></rss>";
+import Mustache from "mustache";
 
 const outputFile = "feed.xml";
 
+const feedTemplate = fs.readFileSync("feed_template.xml.mustache", "utf8");
 const feedList = fs.readFileSync("feed_list.txt", "utf8").trim().split("\n");
 
 function getNewsUrl(feedList) {
@@ -27,9 +25,7 @@ function getNewsUrl(feedList) {
 function writeToFile(rssItem) {
   fs.writeFileSync(
     outputFile,
-    `${rssHeader}${rssItem
-      .filter((rssItem) => rssItem != "")
-      .join("")}${rssFooter}`
+    Mustache.render(feedTemplate, { items: rssItem })
   );
 }
 
@@ -38,21 +34,13 @@ Promise.all(getNewsUrl(feedList))
   .then((flatten) =>
     Promise.all(
       [...new Set(flatten)].map(async (link) => {
-        let result = "";
         try {
-          const extractedData = await extract(link);
-          if (extractedData != null) {
-            result += "<item>";
-            result += `<title>${extractedData.title}</title>`;
-            result += `<description>${extractedData.description}</description>`;
-            result += `<link>${link}</link>`;
-            result += `<content:encoded><![CDATA[${extractedData.content}]]></content:encoded>`;
-            result += "</item>";
-          }
+          return await extract(link);
         } catch (err) {
-        } finally {
-          return result;
+          return null;
         }
       })
-    ).then((rssItem) => writeToFile(rssItem))
+    )
+      .then((rssItem) => rssItem.filter((e) => e !== null))
+      .then((rssItem) => writeToFile(rssItem))
   );

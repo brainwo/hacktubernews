@@ -12,6 +12,7 @@
   "dependencies": {
     "@extractus/article-extractor": "^8.0.10",
     "extract-urls": "^1.4.1",
+    "mustache": "^4.2.0",
     "xml2json": "^0.7.1"
   },
   "devDependencies": {
