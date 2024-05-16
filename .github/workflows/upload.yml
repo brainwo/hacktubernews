@@ -2,8 +2,11 @@ name: Schedule Upload
 
 on:
   schedule:
-    - cron: '0 */4 * * *'
+    - cron: "0 */4 * * *"
   workflow_dispatch:
+  push:
+    branches:
+      - main
 
 permissions:
   contents: read
@@ -37,6 +40,8 @@ jobs:
         run: npm install
       - name: Generate feed.xml
         run: node index.js
+      - name: Move feed.xml to pages artifact folder
+        run: mv feed.xml ./_site/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
