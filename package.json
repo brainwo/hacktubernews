@@ -13,7 +13,7 @@
     "@extractus/article-extractor": "^8.0.10",
     "extract-urls": "^1.4.1",
     "mustache": "^4.2.0",
-    "xml2json": "^0.7.1"
+    "xml2json": "^0.12.0"
   },
   "devDependencies": {
     "jest": "^29.7.0",
