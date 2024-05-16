@@ -1,0 +1,20 @@
+{
+  "name": "hacktuber-news",
+  "version": "0.1.0",
+  "description": "Aggregate blog posts discussed in tech YouTube videos",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --experimental-vm-modules ./node_modules/.bin/jest"
+  },
+  "type": "module",
+  "author": "Brian Wo <45139213+brainwo@users.noreply.github.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@extractus/article-extractor": "^8.0.10",
+    "extract-urls": "^1.4.1",
+    "xml2json": "^0.7.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
