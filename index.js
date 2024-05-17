@@ -13,8 +13,8 @@ const outputPath = "public";
 const feedOutput = `${outputPath}/feed.xml`;
 const pageOutput = `${outputPath}/index.html`;
 
-const feedTemplate = fs.readFileSync("feed.xml.mustache", "utf8");
-const pageTemplate = fs.readFileSync("index.html.mustache", "utf8");
+const feedTemplate = fs.readFileSync("templates/feed.xml.mustache", "utf8");
+const pageTemplate = fs.readFileSync("templates/index.html.mustache", "utf8");
 
 const feedList = fs.readFileSync("feed_list.txt", "utf8").trim().split("\n");
 
