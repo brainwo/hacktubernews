@@ -44,7 +44,7 @@ function writeToFile(rssItem) {
     pageOutput,
     Mustache.render(pageTemplate, {
       items: rssItem,
-      domain: function () {
+      hostname: function () {
         return this.url.split("/")[2];
       },
     })
