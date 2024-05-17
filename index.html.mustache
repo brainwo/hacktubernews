@@ -8,7 +8,7 @@
       name="description"
       content="Aggregate blog posts discussed in tech YouTube videos"
     />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="./style.css" rel="stylesheet" />
   </head>
   <body class="text-center bg-gray-900 text-gray-100">
     <h1 class="text-5xl font-bold p-5 mt-24">Hacktuber News</h1>
@@ -19,11 +19,16 @@
       class="bg-gray-700 rounded-2xl w-min mx-auto align-center my-4 flex p-4"
     >
       <pre class="whitespace-nowrap">
-      <a href="https://brainwo.github.io/hacktubernews/feed.xml">
     <code>https://brainwo.github.io/hacktubernews/feed.xml</code>
-      </a>
     </pre>
-      <button id="copy" class="ml-4 font-bold" onclick="copyUrl()">Copy</button>
+      <button
+        id="copy"
+        style="display: none"
+        class="ml-4 font-bold"
+        onclick="copyUrl()"
+      >
+        Copy
+      </button>
     </div>
     <div>
       ⭐ Star this project on
@@ -52,5 +57,10 @@
       button.innerText = "Copied!";
       button.disabled = true;
     }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      var element = document.getElementById("copy");
+      element.style.display = "block";
+    });
   </script>
 </html>

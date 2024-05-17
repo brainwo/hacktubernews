@@ -36,9 +36,6 @@ function getNewsUrl(feedList) {
  * @param {ArticleData[]} rssItem
  */
 function writeToFile(rssItem) {
-  if (!fs.existsSync(outputPath)) {
-    fs.mkdirSync(outputPath, { recursive: true });
-  }
   fs.writeFileSync(
     feedOutput,
     Mustache.render(feedTemplate, { items: rssItem })
