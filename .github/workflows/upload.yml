@@ -30,15 +30,12 @@ jobs:
           node-version: 18
       - name: Install Node.js dependencies
         run: npm install --omit=dev
-      - name: Generate feed.xml
+      - name: Generate files
         run: node index.js
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
-        with:
-          source: ./
-          destination: ./_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+        with:
+          path: "./public"
 
   deploy:
     environment:

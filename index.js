@@ -9,9 +9,13 @@ import { getFilteredUrlFromFeed } from "./src/filter.js";
 import { extract } from "@extractus/article-extractor";
 import Mustache from "mustache";
 
-const outputFile = "feed.xml";
+const outputPath = "public";
+const feedOutput = "public/feed.xml";
+const pageOutput = "public/index.html";
 
 const feedTemplate = fs.readFileSync("feed.xml.mustache", "utf8");
+const pageTemplate = fs.readFileSync("index.html.mustache", "utf8");
+
 const feedList = fs.readFileSync("feed_list.txt", "utf8").trim().split("\n");
 
 /**
@@ -32,9 +36,16 @@ function getNewsUrl(feedList) {
  * @param {ArticleData[]} rssItem
  */
 function writeToFile(rssItem) {
+  if (!fs.existsSync(outputPath)) {
+    fs.mkdirSync(outputPath, { recursive: true });
+  }
   fs.writeFileSync(
-    outputFile,
+    feedOutput,
     Mustache.render(feedTemplate, { items: rssItem })
+  );
+  fs.writeFileSync(
+    pageOutput,
+    Mustache.render(pageTemplate, { items: rssItem })
   );
 }
 

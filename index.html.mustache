@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Hacktuber News</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Aggregate blog posts discussed in tech YouTube videos"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="text-center bg-gray-900 text-gray-100">
+    <h1 class="text-5xl font-bold p-5 mt-24">Hacktuber News</h1>
+    <span
+      >To subscribe to this, simply use this link on any RSS 2.0 reader:</span
+    >
+    <div
+      class="bg-gray-700 rounded-2xl w-min mx-auto align-center my-4 flex p-4"
+    >
+      <pre class="whitespace-nowrap">
+      <a href="https://brainwo.github.io/hacktubernews/feed.xml">
+    <code>https://brainwo.github.io/hacktubernews/feed.xml</code>
+      </a>
+    </pre>
+      <button id="copy" class="ml-4 font-bold" onclick="copyUrl()">Copy</button>
+    </div>
+    <div>
+      ⭐ Star this project on
+      <a href="https://github.com/brainwo/hacktubernews" class="text-blue-400"
+        >GitHub</a
+      >
+    </div>
+    <div class="items-center justify-center max-w-2xl m-auto mt-16">
+      <span class="font-bold">👀 Sneak peak:</span>
+      {{#items}}
+      <article class="text-start m-8">
+        <a href="{{&url}}" class="visited:text-gray-600">
+          <h2 class="font-bold text-xl">{{title}}</h2>
+          <p>{{description}}</p>
+        </a>
+      </article>
+      {{/items}}
+    </div>
+  </body>
+  <script>
+    function copyUrl() {
+      navigator.clipboard.writeText(
+        "https://brainwo.github.io/hacktubernews/feed.xml"
+      );
+      let button = document.getElementById("copy");
+      button.innerText = "Copied!";
+      button.disabled = true;
+    }
+  </script>
+</html>
