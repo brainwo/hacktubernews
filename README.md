@@ -1,4 +1,4 @@
-# Hacktuber News
+# HackTuber News
 
 > Is this a reliable source of tech news?
 
