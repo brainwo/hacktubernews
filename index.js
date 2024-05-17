@@ -58,13 +58,25 @@ Promise.all(getNewsUrl(feedList))
       [...flattenData.reduce((acc, curr) => acc.add(curr), new Set())].map(
         async (link) => {
           try {
-            return await extract(link["url"]);
+            return {
+              article: await extract(link["url"]),
+              date: link["date"],
+            };
           } catch (err) {
             return null;
           }
         }
       )
     )
-      .then((rssItem) => rssItem.filter((e) => e !== null))
+      .then((rssItem) =>
+        rssItem
+          .filter((e) => e !== null)
+          .sort(
+            (a, b) =>
+              new Date(b["date"]).getTime() - new Date(a["date"]).getTime()
+          )
+          .filter((e) => e["article"] !== null)
+          .map((e) => e["article"])
+      )
       .then((rssItem) => writeToFile(rssItem))
   );

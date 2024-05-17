@@ -36,6 +36,7 @@ export function getFilteredUrlFromFeed(feed) {
   return JSON.parse(toJson(feed), { sanitize: false })
     ["feed"]["entry"].map((entry) => ({
       video: entry["media:group"]["media:content"]["url"],
+      published: entry["published"],
       urls: extractUrls(`${entry["media:group"]["media:description"]}`),
     }))
     .flat()
@@ -49,7 +50,9 @@ export function getFilteredUrlFromFeed(feed) {
             (url.includes("status") &&
               (url.includes("twitter.com") || url.includes("x.com")))
         )
-        .forEach((url) => acc.push({ source: curr.video, url: url }));
+        .forEach((url) =>
+          acc.push({ source: curr.video, date: curr.published, url: url })
+        );
       return acc;
     }, new Array());
 }
