@@ -10,8 +10,8 @@ import { extract } from "@extractus/article-extractor";
 import Mustache from "mustache";
 
 const outputPath = "public";
-const feedOutput = "public/feed.xml";
-const pageOutput = "public/index.html";
+const feedOutput = `${outputPath}/feed.xml`;
+const pageOutput = `${outputPath}/index.html`;
 
 const feedTemplate = fs.readFileSync("feed.xml.mustache", "utf8");
 const pageTemplate = fs.readFileSync("index.html.mustache", "utf8");
@@ -42,7 +42,12 @@ function writeToFile(rssItem) {
   );
   fs.writeFileSync(
     pageOutput,
-    Mustache.render(pageTemplate, { items: rssItem })
+    Mustache.render(pageTemplate, {
+      items: rssItem,
+      domain: function () {
+        return this.url.split("/")[2];
+      },
+    })
   );
 }
 
