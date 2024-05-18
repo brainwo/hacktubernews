@@ -47,6 +47,9 @@ function writeToFile(rssItem) {
       hostname: function () {
         return this.url.split("/")[2];
       },
+      shortTitle: function () {
+        return this.title.split(/[|—–]/)[0].trim();
+      },
     })
   );
 }
