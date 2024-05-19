@@ -1,6 +1,9 @@
 name: Schedule Upload
 
 on:
+  push:
+    branches:
+      - master
   schedule:
     - cron: "0 */4 * * *"
   workflow_dispatch:
@@ -18,6 +21,7 @@ concurrency:
 
 jobs:
   build:
+    if: "contains(github.event.head_commit.message, '!')"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -38,6 +42,7 @@ jobs:
           path: "./public"
 
   deploy:
+    if: "contains(github.event.head_commit.message, '!')"
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
