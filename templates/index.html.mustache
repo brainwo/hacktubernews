@@ -55,20 +55,20 @@
       </article>
       {{/items}}
     </div>
+    <script>
+      function copyUrl() {
+        navigator.clipboard.writeText(
+          "https://brainwo.github.io/hacktubernews/feed.xml"
+        );
+        let button = document.getElementById("copy");
+        button.innerText = "Copied!";
+        button.disabled = true;
+      }
+  
+      document.addEventListener("DOMContentLoaded", function () {
+        var element = document.getElementById("copy");
+        element.style.display = "block";
+      });
+    </script>
   </body>
-  <script>
-    function copyUrl() {
-      navigator.clipboard.writeText(
-        "https://brainwo.github.io/hacktubernews/feed.xml"
-      );
-      let button = document.getElementById("copy");
-      button.innerText = "Copied!";
-      button.disabled = true;
-    }
-
-    document.addEventListener("DOMContentLoaded", function () {
-      var element = document.getElementById("copy");
-      element.style.display = "block";
-    });
-  </script>
 </html>
