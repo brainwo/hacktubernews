@@ -1,4 +1,4 @@
-name: Schedule Upload
+name: Scheduled update
 
 on:
   push:
