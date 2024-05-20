@@ -3,3 +3,7 @@ node_modules/
 # Tailwind related
 tailwind.config.js
 input.css
+
+# Produced artifact
+public/feed.xml
+public/index.html
