@@ -1,4 +1,5 @@
 # HackTuber News
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/brainwo/hacktubernews/upload.yml)
 
 > Is this a reliable source of tech news?
 
