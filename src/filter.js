@@ -25,6 +25,7 @@ const blockedUrls = [
  * @typedef {Object} FilteredUrl
  * @property {string} source
  * @property {string} url
+ * @property {string} date
  */
 
 /**

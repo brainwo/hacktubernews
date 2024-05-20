@@ -14,21 +14,16 @@
   </head>
   <body class="text-center bg-gray-900 text-gray-100">
     <h1 class="text-5xl font-bold p-5 mt-24">HackTuber News</h1>
-    <span
-      >To subscribe to this, simply use this link on any RSS 2.0 reader:</span
-    >
-    <div
-      class="bg-gray-700 rounded-2xl w-min mx-auto align-center my-4 flex p-4"
-    >
+    <span>To subscribe to this, simply use this link on any RSS 2.0 reader:</span>
+    <div class="bg-gray-700 rounded-2xl w-min mx-auto align-center my-4 flex p-4">
       <pre class="whitespace-nowrap">
-    <code>https://brainwo.github.io/hacktubernews/feed.xml</code>
-    </pre>
+        <code>https://brainwo.github.io/hacktubernews/feed.xml</code>
+      </pre>
       <button
         id="copy"
         style="display: none"
         class="ml-4 font-bold"
-        onclick="copyUrl()"
-      >
+        onclick="copyUrl()" >
         Copy
       </button>
     </div>
@@ -43,15 +38,15 @@
       {{#items}}
 	<article class="text-start m-8">
 	  <div>
-	    {{#favicon}}
-	      <img class="size-4 inline" style="margin-bottom: 0.25rem;" src="{{favicon}}">
-	    {{/favicon}}
-	    <a href="{{&url}}" class="visited:text-gray-600 inline ml-2">
+	    {{#article.favicon}}
+	      <img class="size-4 inline" style="margin-bottom: 0.25rem;" src="{{article.favicon}}">
+	    {{/article.favicon}}
+	    <a href="{{&article.url}}" class="visited:text-gray-600 inline ml-2">
 	      <h2 class="font-bold text-xl inline">{{shortTitle}}</h2>
 	    </a>
     	    <span class="text-sm text-gray-600 inline">({{hostname}})</span>
     	  </div>
-        <p class="text-gray-600">{{description}}</p>
+				<p class="text-gray-600">{{article.description}}</p>
       </article>
       {{/items}}
     </div>

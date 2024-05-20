@@ -19,9 +19,20 @@ const pageTemplate = fs.readFileSync("templates/index.html.mustache", "utf8");
 const feedList = fs.readFileSync("feed_list.txt", "utf8").trim().split("\n");
 
 /**
+ * @typedef {import("./src/filter.js").FilteredUrl} FilteredUrl
+ */
+
+/**
+ * @typedef {Object} FlattenedUrl
+ * @property {string} url
+ * @property {string[]} dates
+ * @property {string[]} sources
+ */
+
+/**
  * Fetch feeds and return filtered URLs mentioned in the feed
  * @param {string[]} feedList
- * @return {Promise<string[]>}
+ * @return {Promise<FilteredUrl[]>}
  */
 function getNewsUrl(feedList) {
   return feedList.map(async (list) => {
@@ -45,25 +56,47 @@ function writeToFile(rssItem) {
     Mustache.render(pageTemplate, {
       items: rssItem,
       hostname: function () {
-        return this.url.split("/")[2];
+        return this.article.url.split("/")[2];
       },
       shortTitle: function () {
-        return this.title.split(/[|—–]/)[0].trim();
+        return this.article.title.split(/[|—–]/)[0].trim();
       },
     })
   );
+}
+
+/**
+ * Flatten URLs into unique set
+ * @param {FlattenedUrl} acc
+ * @param {FilteredUrl} curr
+ * @return {FlattenedUrl}
+ */
+function getUniqueUrl(acc, curr) {
+  let sources = [];
+  let dates = [];
+  if (acc[curr["url"]] != undefined) {
+    sources = acc[curr["url"]]["sources"];
+    dates = acc[curr["url"]]["dates"];
+  }
+  acc[curr["url"]] = {
+    url: curr["url"],
+    sources: [...sources, [curr["source"]]],
+    dates: [...dates, [curr["date"]]],
+  };
+  return acc;
 }
 
 Promise.all(getNewsUrl(feedList))
   .then((source) => source.flat())
   .then((flattenData) =>
     Promise.all(
-      [...flattenData.reduce((acc, curr) => acc.add(curr), new Set())].map(
+      [...Object.values(flattenData.reduce(getUniqueUrl, new Object()))].map(
         async (link) => {
           try {
             return {
               article: await extract(link["url"]),
-              date: link["date"],
+              dates: link["dates"],
+              sources: link["sources"],
             };
           } catch (err) {
             return null;
@@ -76,10 +109,10 @@ Promise.all(getNewsUrl(feedList))
           .filter((e) => e !== null)
           .sort(
             (a, b) =>
-              new Date(b["date"]).getTime() - new Date(a["date"]).getTime()
+              new Date(b["dates"][0]).getTime() -
+              new Date(a["dates"][0]).getTime()
           )
           .filter((e) => e["article"] !== null)
-          .map((e) => e["article"])
       )
       .then((rssItem) => writeToFile(rssItem))
   );
