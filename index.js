@@ -8,7 +8,6 @@ import fs from "node:fs";
 import { getFilteredUrlFromFeed } from "./src/filter.js";
 import { extract } from "@extractus/article-extractor";
 import Mustache from "mustache";
-import { minify } from "html-minifier-terser";
 
 const outputPath = "public";
 const feedOutput = `${outputPath}/feed.xml`;
@@ -52,7 +51,8 @@ function writeToFile(rssItem) {
     feedOutput,
     Mustache.render(feedTemplate, { items: rssItem })
   );
-  minify(
+  fs.writeFileSync(
+    pageOutput,
     Mustache.render(pageTemplate, {
       items: rssItem,
       hostname: function () {
@@ -61,16 +61,8 @@ function writeToFile(rssItem) {
       shortTitle: function () {
         return this.article.title.split(/[|—–]/)[0].trim();
       },
-    }),
-    {
-      collapseWhitespace: true,
-      minifyJS: true,
-      collapseBooleanAttributes: true,
-      collapseInlineTagWhitespace: true,
-      removeOptionalTags: true,
-      removeComments: true,
-    }
-  ).then((minifiedHtml) => fs.writeFileSync(pageOutput, minifiedHtml));
+    })
+  );
 }
 
 /**

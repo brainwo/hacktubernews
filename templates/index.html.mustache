@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>HackTuber News</title>
@@ -6,7 +6,8 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta
       name="description"
-      content="Aggregate blog posts discussed in tech YouTube videos" />
+      content="Aggregate blog posts discussed in tech YouTube videos"
+    />
     <link rel="icon" href="./favicon.ico" type="image/x-icon" />
     <link href="./style.css" rel="stylesheet" />
     <link rel="alternate" type="application/rss+xml" href="./feed.xml" title="HackTuber News">
@@ -15,8 +16,8 @@
     <h1 class="text-5xl font-bold p-5 mt-24">HackTuber News</h1>
     <span>To subscribe to this, simply use this link on any RSS 2.0 reader:</span>
     <div class="bg-gray-700 rounded-2xl w-min mx-auto align-center my-4 flex p-4">
-			<pre class="whitespace-nowrap">
-			<code>https://brainwo.github.io/hacktubernews/feed.xml</code>
+      <pre class="whitespace-nowrap">
+        <code>https://brainwo.github.io/hacktubernews/feed.xml</code>
       </pre>
       <button
         id="copy"
@@ -28,9 +29,9 @@
     </div>
     <div>
       ⭐ Star this project on
-			<a href="https://github.com/brainwo/hacktubernews" class="text-blue-400">
-					GitHub
-			</a>
+      <a href="https://github.com/brainwo/hacktubernews" class="text-blue-400"
+        >GitHub</a
+      >
     </div>
     <div class="items-center justify-center max-w-2xl m-auto mt-16">
       <span class="font-bold">👀 Sneak peek:</span>
@@ -58,6 +59,7 @@
         button.innerText = "Copied!";
         button.disabled = true;
       }
+  
       document.addEventListener("DOMContentLoaded", function () {
         var element = document.getElementById("copy");
         element.style.display = "block";
