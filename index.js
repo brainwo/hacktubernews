@@ -49,7 +49,12 @@ function getNewsUrl(feedList) {
 function writeToFile(rssItem) {
   fs.writeFileSync(
     feedOutput,
-    Mustache.render(feedTemplate, { items: rssItem })
+    Mustache.render(feedTemplate, {
+      items: rssItem,
+      updated: function () {
+        return this.dates.at(-1);
+      },
+    })
   );
   fs.writeFileSync(
     pageOutput,
@@ -72,16 +77,22 @@ function writeToFile(rssItem) {
  * @return {FlattenedUrl}
  */
 function getUniqueUrl(acc, curr) {
-  let sources = [];
+  let prevSources = [];
+  let prevDates = [];
   let dates = [];
   if (acc[curr["url"]] != undefined) {
-    sources = acc[curr["url"]]["sources"];
-    dates = acc[curr["url"]]["dates"];
+    prevSources = acc[curr["url"]]["sources"];
+    prevDates = acc[curr["url"]]["dates"];
+    if (Date.parse(prevDates) < Date.parse(curr["date"])) {
+      dates = [...prevDates, curr["date"]];
+    } else {
+      dates = [curr["date"], ...prevDates];
+    }
   }
   acc[curr["url"]] = {
     url: curr["url"],
-    sources: [...sources, [curr["source"]]],
-    dates: [...dates, [curr["date"]]],
+    sources: [...prevSources, curr["source"]],
+    dates: dates.length === 0 ? [curr["date"]] : dates,
   };
   return acc;
 }
@@ -107,11 +118,7 @@ Promise.all(getNewsUrl(feedList))
       .then((rssItem) =>
         rssItem
           .filter((e) => e !== null)
-          .sort(
-            (a, b) =>
-              new Date(b["dates"][0]).getTime() -
-              new Date(a["dates"][0]).getTime()
-          )
+          .sort((a, b) => Date.parse(b["dates"][0]) - Date.parse(a["dates"][0]))
           .filter((e) => e["article"] !== null)
       )
       .then((rssItem) => writeToFile(rssItem))
