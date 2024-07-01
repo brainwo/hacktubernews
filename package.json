@@ -16,7 +16,7 @@
     "xml2json": "^0.7.1"
   },
   "devDependencies": {
-    "@eslint/js": "^9.3.0",
+    "@eslint/js": "^9.6.0",
     "eslint": "^9.5.0",
     "globals": "^15.6.0",
     "jest": "^29.7.0",
