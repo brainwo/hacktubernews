@@ -19,6 +19,7 @@ const blockedUrls = [
   "https://twitter.com",
   "https://www.threads.net",
   "http://cleancoder.com",
+  "https://frontendmasters.com",
 ];
 
 /**
