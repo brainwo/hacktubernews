@@ -10,7 +10,7 @@
   "author": "Brian Wo <45139213+brainwo@users.noreply.github.com>",
   "license": "MIT",
   "dependencies": {
-    "@extractus/article-extractor": "^8.0.10",
+    "@extractus/article-extractor": "^8.0.14",
     "extract-urls": "^1.4.1",
     "mustache": "^4.2.0",
     "xml2json": "^0.7.1"
