@@ -1,69 +1,67 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>HackTuber News</title>
-    <meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta
-      name="description"
-      content="Aggregate blog posts discussed in tech YouTube videos"
-    />
-    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
-    <link href="./style.css" rel="stylesheet" />
-    <link rel="alternate" type="application/rss+xml" href="./feed.xml" title="HackTuber News">
-  </head>
-  <body class="text-center bg-gray-900 text-gray-100">
-    <h1 class="text-5xl font-bold p-5 mt-24">HackTuber News</h1>
-    <span>To subscribe to this, simply use this link on any RSS 2.0 reader:</span>
-    <div class="bg-gray-700 rounded-2xl w-min mx-auto align-center my-4 flex p-4">
-      <pre class="whitespace-nowrap">
+
+<head>
+  <title>HackTuber News</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Aggregate blog posts discussed in tech YouTube videos" />
+  <meta name="darkreader-lock">
+  <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+  <link href="./style.css" rel="stylesheet" />
+  <link rel="alternate" type="application/rss+xml" href="./feed.xml" title="HackTuber News">
+</head>
+
+<body class="text-center text-gray-100">
+  <h1 class="text-5xl font-bold p-5 mt-24">HackTuber News</h1>
+  <span>To subscribe to this, simply use this link on any RSS 2.0 reader:</span>
+  <div class="bg-gray-700 rounded-2xl w-min mx-auto align-center my-4 flex p-4">
+    <pre class="whitespace-nowrap">
         <code>https://brainwo.github.io/hacktubernews/feed.xml</code>
       </pre>
-      <button
-        id="copy"
-        style="display: none"
-        class="ml-4 font-bold"
-        onclick="copyUrl()" >
-        Copy
-      </button>
-    </div>
-    <div>
-      ⭐ Star this project on
-      <a href="https://github.com/brainwo/hacktubernews" class="text-blue-400"
-        >GitHub</a
-      >
-    </div>
-    <div class="items-center justify-center max-w-2xl m-auto mt-16">
-      <span class="font-bold">👀 Sneak peek:</span>
-      {{#items}}
-	<article class="text-start m-8">
-	  <div>
-	    {{#article.favicon}}
-	      <img class="size-4 inline" style="margin-bottom: 0.25rem;" src="{{article.favicon}}">
-	    {{/article.favicon}}
-	    <a href="{{&article.url}}" class="visited:text-gray-600 inline ml-2">
-	      <h2 class="font-bold text-xl inline">{{shortTitle}}</h2>
-	    </a>
-    	    <span class="text-sm text-gray-600 inline">({{hostname}})</span>
-    	  </div>
-				<p class="text-gray-600">{{article.description}}</p>
-      </article>
-      {{/items}}
-    </div>
-    <script>
-      function copyUrl() {
-        navigator.clipboard.writeText(
-          "https://brainwo.github.io/hacktubernews/feed.xml"
-        );
-        let button = document.getElementById("copy");
-        button.innerText = "Copied!";
-        button.disabled = true;
-      }
-  
-      document.addEventListener("DOMContentLoaded", function () {
-        var element = document.getElementById("copy");
-        element.style.display = "block";
-      });
-    </script>
-  </body>
+    <button id="copy" style="display: none" class="ml-4 font-bold" onclick="copyUrl()">
+      Copy
+    </button>
+  </div>
+  <div>
+    ⭐ Star this project on
+    <a href="https://github.com/brainwo/hacktubernews" class="text-blue-400">GitHub</a>
+  </div>
+  <div class="items-center justify-center max-w-2xl m-auto mt-16">
+    <span class="font-bold">👀 Sneak peek:</span>
+    {{#items}}
+    <article class="text-start m-8">
+      <div>
+        {{#article.favicon}}
+        <img class="size-4 inline" style="margin-bottom: 0.25rem;" src="{{article.favicon}}">
+        {{/article.favicon}}
+        <a href="{{&article.url}}" class="visited:text-gray-600 inline ml-2">
+          <h2 class="font-bold text-xl inline">{{shortTitle}}</h2>
+        </a>
+        <span class="text-sm text-gray-600 inline">({{hostname}})</span>
+      </div>
+      <p class="text-gray-600">{{article.description}}</p>
+    </article>
+    {{/items}}
+  </div>
+  <script>
+    const computedStyle = window.getComputedStyle(document.body, null);
+    if (computedStyle.getPropertyValue('--in-content-page-background') == ! "transparent") document.body.style.background = "#111827";
+
+    function copyUrl() {
+      navigator.clipboard.writeText(
+        "https://brainwo.github.io/hacktubernews/feed.xml"
+      );
+      let button = document.getElementById("copy");
+      button.innerText = "Copied!";
+      button.disabled = true;
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      var element = document.getElementById("copy");
+      element.style.display = "block";
+    });
+  </script>
+</body>
+
 </html>
