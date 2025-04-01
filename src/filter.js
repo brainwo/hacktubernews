@@ -20,6 +20,7 @@ const blockedUrls = [
   "https://www.threads.net",
   "http://cleancoder.com",
   "https://frontendmasters.com",
+  "https://www.amazon.com",
 ];
 
 /**
