@@ -1,0 +1,6 @@
+{
+  "html.format.wrapLineLength": 100,
+  "html.format.extraLiners": "",
+  "html.format.wrapAttributes": "force-aligned",
+  "coc.preferences.formatOnSave": true,
+}
