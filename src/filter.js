@@ -21,6 +21,7 @@ const blockedUrls = [
   "http://cleancoder.com",
   "https://frontendmasters.com",
   "https://www.amazon.com",
+  "https://soydev.link",
 ];
 
 /**
