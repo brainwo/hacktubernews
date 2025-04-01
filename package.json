@@ -4,14 +4,18 @@
   "description": "Aggregate blog posts discussed in tech YouTube videos",
   "main": "index.js",
   "scripts": {
+    "build": "node index.js",
+    "serve": "http-server public",
+    "dev": "npm run build && npm run serve",
     "test": "node --experimental-vm-modules ./node_modules/.bin/jest"
   },
   "type": "module",
   "author": "Brian Wo <45139213+brainwo@users.noreply.github.com>",
   "license": "MIT",
   "dependencies": {
-    "@extractus/article-extractor": "^8.0.17",
+    "@extractus/article-extractor": "github:brainwo/article-extractor",
     "extract-urls": "^1.4.1",
+    "http-server": "^14.1.1",
     "mustache": "^4.2.0",
     "xml2json": "^0.7.1"
   },
@@ -19,7 +23,6 @@
     "@eslint/js": "^9.22.0",
     "eslint": "^9.23.0",
     "globals": "^16.0.0",
-    "jest": "^29.7.0",
-    "prettier": "3.5.3"
+    "jest": "^29.7.0"
   }
 }
