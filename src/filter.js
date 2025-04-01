@@ -51,10 +51,10 @@ export function getFilteredUrlFromFeed(feed) {
             !blockedUrls.some((e) => url.startsWith(e)) ||
             url.startsWith("https://www.youtube.com/watch") ||
             (url.includes("status") &&
-              (url.includes("twitter.com") || url.includes("x.com")))
+              (url.includes("twitter.com") || url.includes("x.com"))),
         )
         .forEach((url) =>
-          acc.push({ source: curr.video, date: curr.published, url: url })
+          acc.push({ source: curr.video, date: curr.published, url: url }),
         );
       return acc;
     }, new Array());
